@@ -1,2 +1,2 @@
-# cccomp
-c++ auto compiler
+#cccomp
+<center>c++ auto compiler</center>
