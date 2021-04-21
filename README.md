@@ -1,0 +1,2 @@
+# cccomp
+c++ auto compiler
