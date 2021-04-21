@@ -1,5 +1,5 @@
 # cccomp
 
-_<center>c++ auto compiler</center>_
+_c++ auto compiler_
 
 *this is an auto compiler to cpp programmers, in the frist input do you need to put your archive path, in the second you need to put the archive name*
