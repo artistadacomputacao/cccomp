@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+#imports
+import keyboard
+import os
+# variables
+txt2 = ''
+diretory = input('absolute arvhie pat: ')
+name = input('archive name: ')   
+
+archive = None
+class verification:
+    lendiretory = len(diretory)
+    treechars = name[len(name)-3]    
+    
+# project
+
+    # verify id the client put a / on the final
+
+if diretory[verification().lendiretory -1] == '/':        
+    archive = diretory+name
+else:
+    diretory = diretory + '/'
+    archive = diretory+'/'+name
+    # verify if the client put a .cc or .cpp on the final
+if not verification().treechars == '.':
+    archive+='.cc'
+
+    # verify if archive exists
+try:
+    txt = open(archive)
+    bin = archive.replace('.cc','')
+except FileNotFoundError:
+    archive = archive.replace('.cc','.cpp')
+    txt = open(archive)
+    bin = archive.replace('.cpp','')
+
+execute = 'sudo '+bin
+print(execute)
+while True:
+    if not txt.read() == txt2:
+        os.system('rm'+' '+ diretory+name)
+        os.system('g++ -o '+diretory+name+' '+ archive)
+        os.system('clear')
+        os.system(execute)
+        print('\n\n\n')
+        print('-='*20)
+        print('press enter to continue')
+        while True:
+
+            input('')
+            break
+        txt2 = txt.read()
+    else:
+        txt = open(archive)
