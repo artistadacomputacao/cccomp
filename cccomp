@@ -4,7 +4,7 @@ import keyboard
 import os
 # variables
 txt2 = ''
-diretory = input('absolute archie path: ')
+diretory = input('absolute archive path: ')
 name = input('archive name: ')   
 
 archive = None
